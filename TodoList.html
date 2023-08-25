@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="zh" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      position: relative;
+      font-family: 'Noto Sans SC', sans-serif;
+    }
+
+    html,
+    body {
+      margin: 0px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #eee;
+    }
+
+    .todo-list {
+      max-width: 500px;
+      width: 100%;
+    }
+
+    .todo-list__form {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #c1c1c1;
+    }
+
+    .todo-list__form > input {
+      flex: 1;
+      padding: 10px;
+      height: 20px;
+      outline: none;
+      color: rgba(148, 56, 56);
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 18px;
+      transition: 0.2s;
+    }
+
+    .todo-list__form > input:hover,
+    .todo-list__list li:hover {
+      background-color: rgba(239, 195, 175, 0.3);
+    }
+
+    .todo-list__form > label {
+      font-size: 20px;
+      margin-right: 10px;
+    }
+
+    .todo-list__form-button {
+      cursor: pointer;
+      margin-left: 10px;
+      padding: 5px;
+      font-size: 1.5em;
+      background-color: #efc3af;
+      transition: 0.2s;
+      border: 0.5px solid #9f9793;
+      border-radius: 3px;
+    }
+
+    .todo-list__form-button:hover {
+      background-color: #d66937;
+      color: #fff;
+    }
+
+    .todo-list__list {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      padding: 0px;
+    }
+
+    .todo-list__list li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      transition: 0.2s;
+    }
+
+    /* .todo-list__list li:hover {
+      background-color: rgba(239, 195, 175, 0.3);
+    } */
+
+    .todo-list__list li:nth-last-child(1) {
+      margin-bottom: 0;
+    }
+
+    .todo-list__list li .material-icons {
+      margin-right: 10px;
+    }
+
+    .todo-list li .todo-list__title {
+      flex: 1;
+    }
+
+    .todo-list li .todo-list__check,
+    .todo-list li .todo-list__delete {
+      color: rgb(165, 44, 28);
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .todo-list li .todo-list__check:hover,
+    .todo-list li .todo-list__delete:hover {
+      color: rgb(229, 135, 135);
+    }
+
+    #todolist {
+      padding: 20px;
+      max-width: 500px;
+      width: 100%;
+      border-radius: 10px;
+      background-color: white;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+      transition: 0.2s;
+    }
+
+    #todolist:hover {
+      box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+      padding: 20px;
+      margin-top: -20px;
+      margin-left: -20px;
+      margin-right: -20px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      text-align: center;
+      background-color: #efc3af;
+    }
+  </style>
+  <body>
+    <div id="todolist">
+      <h1>Todo List</h1>
+      <article class="todo-list">
+        <div class="todo-list__form">
+          <label>Add Item :</label>
+          <input />
+          <button
+            class="material-icons todo-list__form-button"
+            onclick="updateUI()"
+          >
+            add
+          </button>
+        </div>
+        <ul class="todo-list__list">
+          <!-- <li>
+            <span class="material-icons">check_box_outline_blank</span>
+            <span>item1</span>
+          </li>
+          <li>
+            <span class="material-icons">check_box_outline_blank</span>
+            <span>item2</span>
+          </li>
+          <li>
+            <span class="material-icons">check_box_outline_blank</span>
+            <span>item3</span>
+          </li> -->
+        </ul>
+      </article>
+    </div>
+
+    <script>
+      const todoList = document.querySelector('.todo-list');
+      const todoListForm = todoList.querySelector('.todo-list__form');
+      const todoListFormInput = todoListForm.querySelector('input');
+      const todoListFormButton = todoListForm.querySelector(
+        '.todo-list__form-button',
+      );
+      const todoListItems = todoList.querySelector('.todo-list__list');
+
+      const todoListDeleteButton = todoList.querySelector(
+        '.todo-list__list li .todo-list__delete',
+      );
+
+      // console.log(todoList);
+      // console.log(todoListFormInput);
+      // console.log(todoListFormButton);
+      // console.log(todoListItems);
+
+      const itemListArray = [
+        {
+          content: 'item1',
+          complete: false,
+        },
+        {
+          content: 'item2',
+          complete: false,
+        },
+        {
+          content: 'item3',
+          complete: false,
+        },
+      ];
+
+      const updateUI = () => {
+        let todoListItemsHTML = '';
+        //生成itemlist
+        itemListArray.forEach(({ content, complete }) => {
+          todoListItemsHTML += `
+            <li>
+            <span class="material-icons todo-list__check">
+              ${complete ? 'check_box' : 'check_box_outline_blank'}
+            </span>
+            <span class="todo-list__title">${content}</span>
+            <span class="material-icons todo-list__delete">
+            delete
+            </span>
+          </li>`;
+        });
+
+        todoListItems.innerHTML = todoListItemsHTML;
+
+        //item掛上delete事件
+        addDeleteItemEvent();
+        //item掛上check事件
+        addCheckTriggerEvent();
+      };
+
+      todoListFormButton.addEventListener('click', () => {
+        let newItem = todoListFormInput.value;
+
+        if (!newItem.trim()) {
+          return;
+        }
+
+        itemListArray.push({ content: newItem, complete: false });
+        //console.log(itemListArray);
+        todoListFormInput.value = '';
+        updateUI();
+      });
+
+      //為每個item新增刪除按鈕並掛上click事件
+      const addDeleteItemEvent = () => {
+        const todoListItems = todoList.querySelectorAll(
+          '.todo-list__list li .todo-list__delete',
+        );
+        todoListItems.forEach((item, index) => {
+          item.addEventListener('click', () => {
+            itemListArray.splice(index, 1);
+            updateUI();
+          });
+        });
+      };
+
+      const addCheckTriggerEvent = () => {
+        const todoListItems = todoList.querySelectorAll(
+          '.todo-list__list li .todo-list__check',
+        );
+
+        todoListItems.forEach((item, index) => {
+          //   console.log(item);
+          item.addEventListener('click', () => {
+            itemListArray[index].complete = !itemListArray[index].complete;
+            updateUI();
+          });
+        });
+      };
+
+      updateUI();
+    </script>
+  </body>
+</html>
