@@ -1,0 +1,302 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #103650;
+}
+
+/* 電腦版開始 */
+@media screen and (min-width: 992px) {
+  /* 星星背景開始 */
+  /* 會閃的星星 */
+  .bg {
+    height: 500px;
+    background-image: url(media/stars-2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: go 1s ease 0s infinite alternate;
+  }
+
+  @keyframes go {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* 會閃的星星 */
+
+  /* 不會閃的星星 */
+
+  .bg2 {
+    background-image: url(media/stars-2.png);
+    background-size: cover;
+    position: fixed;
+    z-index: -100;
+    width: 100%;
+    height: 500px;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    transition: 0.7s;
+  }
+  /* 不會閃的星星 */
+  /* 星星背景結束 */
+
+  /* 燈泡開始 */
+  .icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 30px;
+  }
+
+  .icon-off {
+    background-image: url(media/off.png);
+    background-size: 100%;
+  }
+
+  .icon-on {
+    background-image: url(media/on.png);
+    /* background-color: #fff; */
+    background-size: 100%;
+    opacity: 0;
+    transition: 0.2s;
+  }
+
+  /* 燈泡結束 */
+
+  /* hover特效 */
+
+  /* 燈泡開關 */
+  a:hover .icon-on {
+    opacity: 1;
+  }
+
+  /* 說明文字出現 */
+  a:hover + .content {
+    opacity: 1;
+  }
+
+  /* 星星出現 */
+  a:hover .bg2 {
+    opacity: 0.3;
+  }
+
+  /* hover特效結束 */
+
+  /* 說明文字開始 */
+  .content {
+    border-radius: 15px;
+    padding: 10px;
+    width: 275px;
+    height: 400px;
+    margin-bottom: 30px;
+    opacity: 0;
+    text-align: center;
+    transition: 0.8s;
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    /* box-shadow: 0px 0px 10px #000; */
+  }
+
+  .content > h2 {
+    font-size: 35px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0px 0px 10px #ffffb9, 5px 5px 5px #000;
+  }
+
+  .content > p {
+    padding: 10px 0px;
+    line-height: 30px;
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 5px 5px 4px #000;
+  }
+
+  .contentimg {
+    margin-top: 10px;
+    height: 100px;
+    width: 100px;
+    background-size: 100%;
+    box-shadow: 2px 2px 5px #000;
+    opacity: 0.8;
+  }
+
+  .span {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #17405b;
+    font-weight: bold;
+    margin-top: 5px;
+    padding: 3px;
+    text-shadow: none;
+  }
+
+  /* 說明文字結束 */
+
+  /* 通用樣式開始 */
+  .container-fluid {
+    padding: 0px;
+    position: relative;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  /* 用在會閃的星星 */
+  .mg1 {
+    margin-top: -130px;
+  }
+
+  /* 用在其他網格 */
+  .mg2 {
+    margin-top: 30px;
+  }
+  /* 通用樣式結束 */
+
+  /* 頁尾樣式開始 */
+  .footerimg {
+    width: 40px;
+    height: 40px;
+    margin: 15px;
+  }
+
+  .footertext {
+    color: #fff;
+    text-shadow: 2px 2px 10px #000;
+  }
+  /* 頁尾樣式結束 */
+}
+
+/* 電腦版結束 */
+
+/* 平板手機板開始 */
+@media screen and (max-width: 991px) {
+  /* 星星背景開始 */
+  .bg {
+    height: 500px;
+    background-image: url(media/stars-2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: go 1s ease 0s infinite alternate;
+  }
+
+  @keyframes go {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* 星星背景結束 */
+
+  /* 燈泡開始 */
+  .icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 30px;
+  }
+
+  .icon-off {
+    background-image: url(media/off.png);
+    background-size: 100%;
+  }
+
+  .icon-on {
+    background-image: url(media/on.png);
+    /* background-color: #fff; */
+    background-size: 100%;
+  }
+
+  /* 燈泡結束 */
+
+  /* 說明文字開始 */
+  .content {
+    padding: 10px;
+    width: 275px;
+    height: 400px;
+    margin-bottom: 30px;
+    text-align: center;
+    border-radius: 15px;
+    border: 1px solid #ffffc8;
+  }
+
+  .content > h2 {
+    font-size: 35px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0px 0px 10px #ffffb9, 5px 5px 5px #000;
+  }
+
+  .content > p {
+    padding: 10px 0px;
+    line-height: 30px;
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 5px 5px 4px #000;
+  }
+
+  .contentimg {
+    margin-top: 10px;
+    height: 100px;
+    width: 100px;
+    background-size: 100%;
+    box-shadow: 2px 2px 5px #000;
+    opacity: 0.8;
+  }
+
+  .span {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #17405b;
+    font-weight: bold;
+    margin-top: 5px;
+    padding: 3px;
+    text-shadow: none;
+  }
+
+  /* 說明文字結束 */
+
+  /* 通用樣式開始 */
+  .container-fluid {
+    padding: 0px;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  /* 用在會閃的星星 */
+  .mg1 {
+    margin-top: -130px;
+  }
+
+  /* 用在其他網格 */
+  .mg2 {
+    margin-top: 30px;
+  }
+  /* 通用樣式結束 */
+
+  /* 頁尾樣式開始 */
+  .footerimg {
+    width: 50px;
+    height: 50px;
+    margin: 15px;
+  }
+
+  .footertext {
+    color: #fff;
+  }
+  /* 頁尾樣式開始 */
+}
+
+/* 平板手機板結束 */
