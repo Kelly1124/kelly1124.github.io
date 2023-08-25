@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>優‧服 | ようふく</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <!--css開始-->
+    <link href="animate.css" rel="stylesheet" type="text/css">
+    <!--css結束-->
+    <!-- 頁尾h2字型 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
+    <!-- 頁尾h2字型 -->
+    <!-- 頁尾資訊、版權字型 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&family=Roboto+Slab:wght@500;600&display=swap"
+        rel="stylesheet">
+    <!-- 頁尾資訊、版權字型 -->
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header class="row">
+            <!-- LOGO -->
+            <div class="col-12 d-none w-100 d-flex justify-content-center animated fadeInDown">
+                <a href="index.html">
+                    <img src="media/header-logo.png" class="logo">
+                </a>
+            </div>
+            <!-- LOGO -->
+            <nav class="col-12">
+                <!-- navbar-expand-md 在 md 斷點時摺疊 -->
+                <div class="navbar navbar-expand-md navbar-light bg-light">
+                    <a class="navbar-brand d-md-none" href="index.html">優 ‧ 服 | ようふく</a>
+                    <!--三橫線按鈕-->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!--中斷點群組和隱藏導覽列內容-->
+                    <div class="collapse navbar-collapse" id="navbar">
+                        <!--導覽列開始-->
+                        <div class="navbar-nav w-100 d-flex justify-content-start">
+                            <!--active 表示當前的頁面-->
+                            <a class="nav-item nav-link" href="index.html">首頁</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                                    data-toggle="dropdown">
+                                    服飾
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="skirt.html">裙子</a>
+                                    <a class="dropdown-item" href="pants.html">褲子</a>
+                                    <a class="dropdown-item disabled" href="#">上衣</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle disabled" href="#" id="navbarDropdownMenuLink"
+                                    data-toggle="dropdown">
+                                    飾品
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">包包</a>
+                                    <a class="dropdown-item" href="#">首飾</a>
+                                </div>
+                            </li>
+                            <a class="nav-item nav-link" href="contact.html">聯絡我們</a>
+                        </div>
+                        <!-- <form class="form-inline">
+                            <input class="form-control" type="search" value="Search">
+                            <button class="btn" type="submit">搜尋</button>
+                        </form> -->
+                    </div>
+
+                </div>
+            </nav>
+        </header>
+    </div>
+    <main class="container">
+        <!-- 輪播圖開始 -->
+        <div class="row no-gutters">
+            <div class="col w-100 d-flex justify-content-center animated fadeIn">
+                <div id="demo" class="carousel slide w-100" data-interval="3500" data-ride="carousel">
+                    <!--標記符號與控制項 -->
+                    <ul class="carousel-indicators">
+                        <li data-target="#demo" data-slide-to="0" class="active"></li>
+                        <li data-target="#demo" data-slide-to="1"></li>
+                        <li data-target="#demo" data-slide-to="2"></li>
+                    </ul>
+                    <!-- 輪播圖片 -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="media/slide-1.jpg" class="w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="media/slide-2.jpg" class="w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="media/slide-3.jpg" class="w-100">
+                        </div>
+                    </div>
+                    <!-- 左右切換按鈕 -->
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- 輪播圖結束 -->
+        <!-- 內文開始 -->
+        <div class="row">
+            <div class="col w-100">
+                <div class="card w-100 d-flex justify-content-center">
+                    <div class="card-body">
+                        <h2 class="card-title">關於我們</h2>
+                        <p class="card-text">
+                            還記得第一次去日本的自助旅行，逛日本的百貨，超級驚艷，東西都好精緻好有質感，每天從開店逛到打烊，結果回程行李56KG超重行李+刷爆的信用卡
+                            差點回不來!
+                        </p>
+                        <p class="card-text">
+                            「為什麼台灣的街都不好逛？為什麼百貨公司的品牌服裝都那麼不流行？不少女？為什麼我買不到質感的特別的衣服？」
+                        </p>
+                        <p class="card-text">
+                            所以決定赴日幫大家代購台灣買不到的流行商品順便ㄧ圓留學夢。在還沒有人開團教學代購的時候，我憑著四級不到的日文程度，隻身到東京闖蕩，貨運公司怎麼找？哪裡批貨？哪裡便宜？哪裡好逛？這些都不知道，只憑著一股熱血，自己慢慢摸索找到門路。後來韓風在日本流行，從日本飛韓國很快，就兩邊跑。
+                        </p>
+                        <p class="card-text">
+                            日本韓國批貨好幾年批多了看的也多了，最後單純的批貨已無法滿足我，哪件衣服版型好看顏色不好看，明明怎樣可以更好最後只能被迫妥協、批不到想要的款式、找不到喜歡的衣服，但我不想妥協、不想將就。
+                        </p>
+                        <p class="card-text">
+                            所以我開始了我的自訂之路，做自己喜歡的衣服。從布料的挑選、版型的修改都出自我的選擇、我的堅持。賣過哪些材質容易皺不拉機、哪些版型容易顯胖、哪些花色顯老⋯都逃不過我的眼睛。這麼多年的批貨經驗練就我的火眼睛星。做了這麼久的服裝，看到自己的自訂款還是會有那種很心動、很熱愛、很驚艷的感覺。很想跟大家分享。
+                        </p>
+                        <p class="card-text">
+                            我自己很喜歡到處旅行，喜歡新鮮的事物與體驗，喜歡拍美美的照片，每年必追的花季、最可愛的咖啡廳，每個必去的景點，為每個場景搭配適合的風格穿搭，為生活留下美美的紀錄，不會總是一成不變而是充滿新鮮。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 內文結束 -->
+    </main>
+    <!-- 頁尾 -->
+    <footer class="container-fluid myfooter">
+        <div class="row no-gutters">
+            <div class="col-12">
+                <h2>
+                    優‧服 | ようふく
+                    <span>Copyright &copy; 2021 All Right Reserved</span>
+                </h2>
+            </div>
+        </div>
+        <div class="row no-gutters mt-4">
+            <div class="col-12 col-lg-3">
+                <p>
+                    <span>
+                        <img src="media/phone-call.png" alt="03-1231314">
+                        <a href="tel:032121014">03-1231314</a>
+                    </span>
+                </p>
+            </div>
+
+
+            <div class="col-12 col-lg-5">
+                <p>
+                    <span>
+                        <img src="media/mail.png" alt="kelly1124.chang@gmail.com">
+                        <a href="mailto:kelly1124.chang@gmail.com">kelly1124.chang@gmail.com</a>
+                    </span>
+                </p>
+            </div>
+            <div class="col-12 col-lg-4">
+                <p>
+                    <span>
+                        <img src="media/location.png" alt="桃園市蘆竹區南平街7號12樓之一">
+                        <a href="https://goo.gl/maps/iRAfwXvTWovsDpyW6" target="_blank">桃園市蘆竹區中正路100號</a>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- 頁尾 -->
+</body>
+
+</html>

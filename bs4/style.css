@@ -1,0 +1,204 @@
+.logo{
+    height: 300px;
+}
+
+/* 電腦版樣式 */
+@media screen and (min-width:992px) {
+    
+
+
+/* 輪播圖點點 */
+.carousel-indicators li {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+/* 輪播圖速度 */
+.carousel-inner .carousel-item {
+    transition: -webkit-transform 1s ease;
+    transition: transform 1s ease;
+    transition: transform 1s ease, -webkit-transform 1s ease;
+}
+
+/* 首頁內文樣式 */
+.card-text{
+    text-align: justify;
+    text-indent: 2rem;
+}
+
+/* 聯絡表單樣式 */
+fieldset h5{
+    display: inline-block;
+}
+
+/* 商品圖 */
+.prod{
+    margin-bottom: 50px;
+}
+
+img+h4{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.prod img{
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+.prod img:hover{
+    opacity: 1;
+    box-shadow: 2px 2px 10px 5px #999999;
+}
+
+
+/* 頁尾樣式 */
+.myfooter {
+    padding: 20px 0px;
+    border-top: 1px solid #000;
+    background-image: linear-gradient(0deg, #575757 0%,#dadada 100%);
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.myfooter h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 5px #555555;
+    font-family: 'Noto Serif TC', serif;
+}
+
+.myfooter h2 span {
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-style: italic;
+    font-family: 'Roboto Slab', serif;
+}
+
+.myfooter img {
+    width: 35px;
+    height: auto;
+    vertical-align: middle;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.myfooter img:hover{
+    opacity: 1;
+}
+
+.myfooter a {
+    font-size: 1rem;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.5s;
+    padding: 5px;
+    position: relative;
+    opacity: 0.7;
+    font-family: 'Roboto Slab', serif;
+    transition: 0.8s;
+}
+
+.myfooter a:hover {
+    text-shadow: 2px 2px 10px #7f7f7f;
+    bottom: 3px;
+    opacity: 1;
+}
+
+.myfooter span {
+    padding: 15px;
+}
+}
+/* 電腦版結束 */
+
+/* 平板手機版樣式 */
+@media screen and (max-width:991px) {
+    
+
+
+    /* 輪播圖點點 */
+    .carousel-indicators li {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+    }
+    
+    /* 輪播圖速度 */
+    .carousel-inner .carousel-item {
+        transition: -webkit-transform 1s ease;
+        transition: transform 1s ease;
+        transition: transform 1s ease, -webkit-transform 1s ease;
+    }
+    
+    /* 首頁內文樣式 */
+    .card-text{
+        text-align: justify;
+        text-indent: 2rem;
+    }
+    
+    /* 聯絡表單樣式 */
+    fieldset h5{
+        display: inline-block;
+    }
+    
+    /* 商品圖 */
+    .prod{
+        margin-bottom: 50px;
+    }
+    
+    img+h4{
+        font-size: 22px;
+        font-weight: bold;
+    }    
+    
+    /* 頁尾樣式 */
+    .myfooter {
+        padding: 20px 0px;
+        border-top: 1px solid #000;
+        background-image: linear-gradient(0deg, #575757 0%,#dadada 100%);
+        color: #fff;
+        text-align: center;
+        position: relative;
+    }
+    
+    .myfooter h2 {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #fff;
+        text-shadow: 2px 2px 5px #555555;
+        font-family: 'Noto Serif TC', serif;
+    }
+    
+    .myfooter h2 span {
+        font-size: 1.2rem;
+        color: #ffffff;
+        font-style: italic;
+        font-family: 'Roboto Slab', serif;
+    }
+    
+    .myfooter img {
+        width: 35px;
+        height: auto;
+        vertical-align: middle;
+    }
+    
+    .myfooter a {
+        font-size: 1rem;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+        transition: 0.5s;
+        padding: 5px;
+        font-family: 'Roboto Slab', serif;
+    }
+
+    .myfooter span {
+        padding: 15px;
+    }
+    }
+
+/* 平板手機版結束 */

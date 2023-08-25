@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lock Door | 樂多密室逃脫工作室</title>
+    <!-- LOGO圖示 -->
+    <link rel="shortcut icon" href="../../測試HTML/media/LOGO.png">
+    <!-- LOGO圖示 -->
+    <!-- LOGO、頁尾字型 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&family=Teko:wght@700&display=swap"
+        rel="stylesheet">
+    <!-- LOGO、頁尾字型 -->
+    <!-- aside的h2字型 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap" rel="stylesheet">
+    <!-- aside的h2字型 -->
+    <!-- aside內容字型 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;700&display=swap" rel="stylesheet">
+    <!-- aside內容字型 -->
+    <!-- nav字型 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&display=swap" rel="stylesheet">
+    <!-- nav字型 -->
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        html,
+        body {
+            height: 100%;
+            background-color: #000;
+            background-image: url(media/prison.jpg);
+            background-size: cover;
+            background-repeat:repeat-y;
+            /* background-attachment: fixed; */
+            background-position: center center;
+            font-size: 18px;
+        }
+
+        /* 電腦版開始 */
+        @media screen and (min-width:992px) {
+            .container {
+                width: 85%;
+                background-color: rgba(255, 255, 255, 0.6);
+                box-shadow: 0px 0px 20px rgb(255, 255, 255);
+                margin: 100px auto;
+                position: relative;
+            }
+
+            .logo {
+                font-size: 4rem;
+                font-family: 'RocknRoll One', sans-serif;
+                text-align: center;
+                color: #962205;
+                background-color: #000;
+            }
+
+            .myheader {
+                background-color: #000;
+                height: 50px;
+            }
+
+            .mynav {
+                width: 100%;
+                position: absolute;
+                top: 100px;
+                background-color: #000;
+                border-bottom: 2px solid #fff;
+
+            }
+
+            .mynav ul {
+                list-style-type: none;
+                text-align: center;
+            }
+
+            .mynav li {
+                display: inline-block;
+                padding: 8px;
+            }
+
+            .mynav a {
+                position: relative;
+                display: block;
+                color: #fff;
+                text-decoration: none;
+                font-size: 1.5rem;
+                opacity: 0.8;
+                font-family: 'Noto Sans JP', sans-serif;
+                transition: 0.5s;
+            }
+
+            .mynav a:hover {
+                top: -5px;
+                color: #fff;
+                opacity: 1;
+                text-shadow: 2px 2px 10px #000;
+                background-color: #922409;
+            }
+
+            .myaside {
+                width: 30%;
+                float: left;
+                padding: 10px 10px;
+                box-sizing: border-box;
+            }
+
+            .myaside h2 {
+                font-family: 'Noto Sans JP', sans-serif;
+                text-align: center;
+                font-size: 1.8rem;
+                color: #000;
+                background-color: #000;
+                text-shadow: 2px 2px 20px #922409, -2px -2px 20px #922409;
+                border-radius: 5px 5px 0px 0px;
+                border-bottom: 3px dashed #fff;
+                transition: 0.3s;
+            }
+
+            .myaside h2:hover{
+                color: #fff;
+                border-radius: 5px 5px 0px 0px;
+            }
+
+            .myaside-a,
+            .myaside-b {
+                color: #5b0002;
+                font-size: 1rem;
+                padding: 0px 0px 5px 0px;
+                transition: 0.3s;
+                margin-bottom: 5px;
+            }
+
+            .myaside p {
+                text-align: justify;
+                font-family: 'Noto Sans TC', sans-serif;
+                text-indent: 2rem;
+                /* background-color: rgba(255, 255, 255, 0.5); */
+                padding: 5px;
+                
+            }
+
+            .myaside-a:hover{
+                border-radius: 6px;
+                background-color: #770000;
+                color: #fff;
+                
+            }
+
+            .myaside-b:hover{
+                border-radius: 6px;
+                background-color: #770000;
+                color: #fff;
+            }
+
+            .mycontent {
+                /* background-color: rgba(255, 255, 255, 0.4); */
+                width: 70%;
+                float: left;
+                padding: 10px 10px 10px 0px;
+                box-sizing: border-box;
+                font-size: 20px;
+                color: #5b0002;
+            }
+
+            .mycontent p {
+                text-align: justify;
+                font-family: 'Noto Sans TC', sans-serif;
+                font-weight: bold;
+            }
+
+            .mycontent img {
+                width: 75%;
+                height: auto;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+                font-family: 'Noto Sans JP', sans-serif;
+                border-radius: 5px 5px 0px 0px;
+                color: #000;
+                background-color: #000000;
+                text-align: center;
+                text-shadow: 2px 2px 20px #922409, -2px -2px 20px #922409;
+                transition: 0.3s;
+            }
+
+            h1:hover{
+                color: #fff;
+            }
+
+            .myfooter {
+                padding: 20px 0px;
+                background-image: linear-gradient(0deg, #000000 0%, #741111 100%);
+                clear: both;
+                color: #fff;
+                text-align: center;
+                position: relative;
+            }
+
+            .myfooter h2 {
+                font-size: 2.5rem;
+                font-weight: bold;
+                color: #fff;
+                text-shadow: 2px 2px 5px #000;
+                font-family: 'RocknRoll One', sans-serif;
+            }
+
+            .myfooter h2 span {
+                font-size: 1.2rem;
+                color: #c6c6c6;
+                font-style: italic;
+            }
+
+            .myfooter img {
+                width: 30px;
+                height: auto;
+                vertical-align: middle;
+                opacity: 0.6;
+                transition: 0.5s;
+            }
+
+            .myfooter img:hover{
+                opacity: 1;
+            }
+
+            .myfooter a {
+                font-size: 1rem;
+                color: #fff;
+                font-weight: bold;
+                text-decoration: none;
+                transition: 0.5s;
+                padding: 5px;
+                position: relative;
+                opacity: 0.6;
+            }
+
+            .myfooter a:hover {
+                text-shadow: 2px 2px 10px #000;
+                background-color: #922409;
+                bottom: 5px;
+                opacity: 1;
+            }
+
+            .myfooter span {
+                padding: 15px;
+            }
+
+        }
+
+        /* 電腦版結束 */
+
+        /* 平板版開始 */
+        @media screen and (min-width:576px) and (max-width:991px) {
+            .container {
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.7);
+                box-shadow: 0px 0px 20px rgb(255, 255, 255);
+                position: relative;
+            }
+
+            .logo {
+                font-size: 2.7rem;
+                font-family: 'RocknRoll One', sans-serif;
+                text-align: center;
+                color: #962205;
+                background-color: #000;
+            }
+
+            .myheader {
+                background-color: #000;
+                height: 50px;
+            }
+
+            .mynav {
+                background-color: #000;
+                border-bottom: 2px solid #fff;
+
+            }
+
+            .mynav ul {
+                list-style-type: none;
+                text-align: center;
+                columns: 2;
+            }
+
+            .mynav li {
+                padding: 8px;
+            }
+
+            .mynav a {
+                position: relative;
+                display: block;
+                color: #fff;
+                text-decoration: none;
+                font-size: 1.5rem;
+                font-family: 'Noto Sans JP', sans-serif;
+                transition: 0.4s;
+            }
+
+            .mynav a:hover {
+                top: -5px;
+                color: #922409;
+                text-shadow: 0px 0px 4px #fff, 0px 0px 15px rgb(0, 0, 0);
+                font-weight: bold;
+            }
+
+            .myaside {
+                color: #5b0002;
+                font-size: 1rem;
+            }
+
+            .myaside h2 {
+                font-family: 'Noto Sans JP', sans-serif;
+                border-radius: 5px;
+                text-align: center;
+                font-size: 2rem;
+                color: #000;
+                background-color: #000;
+                text-shadow: 2px 2px 20px #922409, -2px -2px 20px #922409;
+            }
+
+            .myaside-a,
+            .myaside-b {
+                width: 50%;
+                float: left;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+
+            .myaside p {
+                text-align: justify;
+                font-family: 'Noto Sans TC', sans-serif;
+                text-indent: 2rem;
+            }
+
+            .mycontent {
+                padding: 0px 10px;
+                box-sizing: border-box;
+                font-size: 20px;
+                clear: both;
+            }
+
+            .mycontent p {
+                text-align: justify;
+
+                font-family: 'Noto Sans TC', sans-serif;
+                color: #5b0002;
+                font-weight: bold;
+            }
+
+            .mycontent img {
+                width: 70%;
+                height: auto;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+                font-family: 'Noto Sans JP', sans-serif;
+                border-radius: 5px;
+                color: #000;
+                background-color: #000;
+                text-align: center;
+                text-shadow: 2px 2px 20px #922409, -2px -2px 20px #922409;
+            }
+
+            .myfooter {
+                padding: 20px 0px;
+                background-image: linear-gradient(0deg, #000000 0%, #741111 100%);
+                clear: both;
+                color: #fff;
+                text-align: center;
+            }
+
+            .myfooter h2 {
+                font-size: 2.5rem;
+                font-weight: bold;
+                color: #fff;
+                text-shadow: 2px 2px 5px #000;
+                font-family: 'RocknRoll One', sans-serif;
+            }
+
+            .myfooter h2 span {
+                font-size: 1.2rem;
+                color: #c6c6c6;
+                font-style: italic;
+            }
+
+            .myfooter img {
+                width: 30px;
+                height: auto;
+                vertical-align: middle;
+            }
+
+            .myfooter a {
+                font-size: 1.2rem;
+                color: #fff;
+                font-weight: bold;
+                text-decoration: none;
+            }
+
+            .myfooter a:hover {
+                color: #000;
+            }
+
+            .myfooter span {
+                padding: 15px;
+                display: block;
+            }
+
+        }
+
+        /* 平板版結束 */
+
+        /* 手機版開始 */
+        @media screen and (max-width:575px) {
+            .container {
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.7);
+                box-shadow: 0px 0px 20px rgb(255, 255, 255);
+                position: relative;
+            }
+
+            .logo {
+                font-size: 2rem;
+                font-family: 'RocknRoll One', sans-serif;
+                text-align: center;
+                color: #962205;
+                background-color: #000;
+            }
+
+            .myheader {
+                display: none;
+                background-color: #000;
+                height: 50px;
+            }
+
+            .mynav {
+                background-color: #000;
+                border-bottom: 2px solid #fff;
+            }
+
+            .mynav ul {
+                list-style-type: none;
+                text-align: center;
+            }
+
+            .mynav li {
+                padding: 8px;
+            }
+
+            .mynav a {
+                position: relative;
+                display: block;
+                color: #fff;
+                text-decoration: none;
+                font-size: 1rem;
+                font-family: 'Noto Sans JP', sans-serif;
+                transition: 0.4s;
+            }
+
+            .mynav a:hover {
+                top: -5px;
+                color: #922409;
+                text-shadow: 0px 0px 4px #fff, 0px 0px 15px rgb(0, 0, 0);
+                font-weight: bold;
+            }
+
+            .myaside {
+                color: #5b0002;
+                font-size: 1rem;
+            }
+
+            .myaside h2 {
+                font-family: 'Noto Sans JP', sans-serif;
+                text-align: center;
+                font-size: 2rem;
+                color: #000;
+                background-color: #000;
+                text-shadow: 2px 2px 20px #922409, -2px -2px 20px #922409;
+            }
+
+            .myaside-a,
+            .myaside-b {
+                padding: 10px;
+                box-sizing: border-box;
+            }
+
+            .myaside p {
+                text-align: justify;
+                font-family: 'Noto Sans TC', sans-serif;
+                text-indent: 1.5rem;
+            }
+
+            .mycontent {
+                padding: 10px 10px;
+                box-sizing: border-box;
+                font-size: 1rem;
+            }
+
+            .mycontent p {
+                text-align: justify;
+                font-family: 'Noto Sans TC', sans-serif;
+                color: #5b0002;
+                font-weight: bold;
+            }
+
+            .mycontent img {
+                width: 100%;
+                height: auto;
+            }
+
+            h1 {
+                font-size: 2rem;
+                font-family: 'Noto Sans JP', sans-serif;
+                color: #000;
+                background-color: #000;
+                text-align: center;
+                text-shadow: 2px 2px 20px #922409, -2px -2px 20px #922409;
+            }
+
+            .myfooter {
+                padding: 20px 0px;
+                background-image: linear-gradient(0deg, #000000 0%, #741111 100%);
+                clear: both;
+                color: #fff;
+                text-align: center;
+            }
+
+            .myfooter h2 {
+                font-size: 1.2rem;
+                font-weight: bold;
+                color: #fff;
+                text-shadow: 2px 2px 5px #000;
+                font-family: 'RocknRoll One', sans-serif;
+            }
+
+            .myfooter h2 span {
+                font-size: 0.7rem;
+                color: #a1a1a1;
+                font-style: italic;
+            }
+
+            .myfooter img {
+                width: 20px;
+                height: auto;
+                vertical-align: middle;
+            }
+
+            .myfooter a {
+                font-size: 0.7rem;
+                color: #fff;
+                font-weight: bold;
+                text-decoration: none;
+            }
+
+            .myfooter a:hover {
+                color: #000;
+            }
+
+            .myfooter span {
+                padding: 5px;
+                display: block;
+            }
+
+        }
+
+        /* 手機版結束 */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            Lock Door | 樂多工作室
+        </div>
+        <header class="myheader"></header>
+        <nav class="mynav">
+            <ul>
+                <li>
+                    <a href="javascript:;">|關於樂多|</a>
+                </li>
+                <li>
+                    <a href="javascript:;">|密室主題|</a>
+                </li>
+                <li>
+                    <a href="javascript:;">|優惠活動|</a>
+                </li>
+                <li>
+                    <a href="javascript:;">|聯絡我們|</a>
+                </li>
+                <!-- <li>
+                    <a href="javascript:;">|企業合作方案|</a>
+                </li> -->
+            </ul>
+        </nav>
+        <main>
+            <aside class="myaside">
+                <div class="myaside-a">
+                    <h2>成立理念</h2>
+                    <p>活著就是要玩，玩出自己的人生！</p>
+                    <p>
+                        我們秉持著「Real Touch、Touch Real」的理念，堅持帶給大眾最真實與主題互動的活動。
+                    </p>
+                    <p>
+                        成立於2016年，將原本是網路解謎遊戲的密室逃脫搬到現實世界，並推出第一代密室逃脫作品"逃離夢幻島"。玩家須在規定的時間內尋找關鍵線索、破解謎題、逃離密室。透過精心設計的機關，希望能讓更多玩家體驗到遊戲的樂趣。
+                    </p>
+
+
+                </div>
+                <div class="myaside-b">
+                    <h2>何謂密室逃脫</h2>
+                    <p>每個主題都以一個故事為主軸，從故事中尋找蛛絲馬跡。不同空間有多項機關與謎題，思考道具和故事間的關聯，聯想解開謎題進入下個關卡。
+                    </p>
+                    <p>
+                        空間裡面的每樣物品都有可能是關鍵，就看你們能否察覺到我們精心設計的謎題，並在時間內解開所有機關、逃出密室。
+                    </p>
+                </div>
+            </aside>
+            <div class="mycontent">
+                <h1>關於樂多</h1>
+                <p>
+                    真人密室逃脫，給你最身歷其境的體驗。
+                </p>
+                <img src="media/escape.png" alt="">
+                <p>
+                    密室逃脫不只是一場解謎競賽，而是像經歷一場扣人心弦、驚心動魄的冒險旅程。
+                </p>
+                <p>
+                    2016至今，我們在全台各地區逐漸的拓展，期許帶給全台大眾最新、最身歷其境的活動內容！
+                </p>
+                <p>
+                    遊戲，​是找回熱情的最佳良藥。<br>
+                    我們邀請你玩一場遊戲，當一次笨蛋，好好的享受一次生活。
+                </p>
+                <img src="media/escape-1.png" alt="">
+            </div>
+
+        </main>
+        <footer class="myfooter">
+            <h2>
+                Lock Door | 樂多工作室
+                <span>Copyright &copy; 2021 All Right Reserved</span>
+            </h2>
+            <p>
+                <span>
+                    <img src="media/telephone.png" alt="03-2121014">
+                    <a href="tel:032121014">03-1231314</a>
+                </span>
+
+                <span>
+                    <img src="media/gmail.png" alt="kelly1124.chang@gmail.com">
+                    <a href="mailto:kelly1124.chang@gmail.com">kelly1124.chang@gmail.com</a>
+                </span>
+
+                <span>
+                    <img src="media/map.png" alt="桃園市蘆竹區南平街7號12樓之一">
+                    <a href="https://goo.gl/maps/iRAfwXvTWovsDpyW6" target="_blank">桃園市蘆竹區中正路100號</a>
+                </span>
+            </p>
+        </footer>
+
+    </div>
+</body>
+
+</html>
